@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>September 25!</title>
+    <title>rock paper scissors</title>
 
     <!-- Required meta tags -->
     <meta charset="utf-8" />
@@ -26,8 +26,18 @@
     <!-- Header End -->
 
     <!-- Main -->
-    <main>
-        <h1>test</h1>
+    <main class="container text-center my-4 container-box">
+        <div class="row">
+            <div class="col-md-6 mx-auto container-box">
+            </div>
+        </div>
+        <div class="content mt-4 container-box">
+            <!-- Your content goes here -->
+            <button onclick="selectRock()"> <img id="rock" src="imgs/rock-neutral.png" alt="Placeholder Image" class="img-fluid"></button>
+            <button onclick="selectPaper()"> <img id="paper" src="imgs/paper-neutral.png" alt="Placeholder Image" class="img-fluid"></button>
+            <button onclick="selectScissors()"> <img id="scissors" src="imgs/scissors-neutral.png" alt="Placeholder Image" class="img-fluid"></button>
+        </div>
+        <div id="info"></div>
     </main>
     <!-- Main End -->
 
@@ -48,3 +58,53 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+//all of this is from the random testimonials site \/
+
+
+
+
+
+
+
+
+
+<script>
+
+    let quotesArray = [
+    'NAPS is by far the most significant cultural force of the decade. — New York Times',
+    'These days sleeping at your desk is not just acceptable, it’s encouraged. — The Atlantic',
+    'NAPS has changed the way people think about sleep, on a grand scale. — Washington Post',
+    'Happiness increased 200% since NAPS began promoting siestas. — National Science Review',
+    'NAPS has ushered in a new era of sleep. — USA Today',
+    'Not surprisingly, more siestas means more productivity. — Wall Street Journal',
+    'NAPS is doing the hard work of helping people get the rest they need. — U.S. News'
+    ]
+    
+    let randomNumber = Math.floor(Math.random()*quotesArray.length)
+    
+    
+    document.getElementById('press-quote').textContent = '"' + quotesArray[randomNumber].split(' - ')[0] + '" - ' +quotesArray[randomNumber].split('-')[1] ;
+    </script>
+
+
+
+
+press quotes .txt
+
+'NAPS is by far the most significant cultural force of the decade. — New York Times',
+'These days sleeping at your desk is not just acceptable, it’s encouraged. — The Atlantic',
+'NAPS has changed the way people think about sleep, on a grand scale. — Washington Post',
+'Happiness increased 200% since NAPS began promoting siestas. — National Science Review',
+'NAPS has ushered in a new era of sleep. — USA Today',
+'Not surprisingly, more siestas means more productivity. — Wall Street Journal',
+'NAPS is doing the hard work of helping people get the rest they need. — U.S. News'
