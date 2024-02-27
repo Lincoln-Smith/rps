@@ -1,30 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>rock paper scissors</title>
-
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-    <!--  Font here -->
- 
-
-    <!-- Bootstrap CSS v5.2.1 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-        crossorigin="anonymous" />
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Your CSS code here */
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
+<body>
     <!-- Header -->
     <header>
     </header>
     <!-- Header End -->
-
+    <!--from mad lib-->
+    <div class="container my-4"></div>
+    <div id="madLibOutput" class="text-center"></div>
+      
     <!-- Main -->
     <main class="container text-center my-4 container-box">
         <div class="row">
@@ -32,82 +24,40 @@
             </div>
         </div>
         <div class="content mt-4 container-box">
-            <!-- Your content goes here -->
-            <button onclick="selectRock()"> <img id="rock" src="imgs/rock-neutral.png" alt="Placeholder Image" class="img-fluid"></button>
-            <button onclick="selectPaper()"> <img id="paper" src="imgs/paper-neutral.png" alt="Placeholder Image" class="img-fluid"></button>
-            <button onclick="selectScissors()"> <img id="scissors" src="imgs/scissors-neutral.png" alt="Placeholder Image" class="img-fluid"></button>
+            <div class="selections">
+                <button class="selection" data-selection="rock">✊</button>
+                <button class="selection" data-selection="paper">✋</button>
+                <button class="selection" data-selection="scissors">✌</button>
+            </div>
+            <div class="results">
+                <div>
+                    You
+                    <span class="result-score" data-your-score>0</span>
+                </div>
+                <div data-final-column>
+                    Computer
+                    <span class="result-score" data-computer-score>0</span>
+                </div>
+            </div>
+            <!-- Game Over Messages -->
+            <div id="gameOverMessages" class="mt-4">
+                <p id="gameOverMessage"></p>
+                <p id="finalScores"></p>
+            </div>
+            <!-- Game Over Messages End -->
         </div>
-        <div id="info"></div>
     </main>
-
-
-
     <!-- Main End -->
-
     <!-- Footer -->
     <footer></footer>
     <!-- Footer End-->
-
-    <!-- Bootstrap JavaScript  -->
+    <!-- Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
-    <script src="script.js"></script>
-
+   
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-//all of this is from the random testimonials site \/
-
-
-
-
-
-
-
-
-
-<script>
-
-    let quotesArray = [
-    'NAPS is by far the most significant cultural force of the decade. — New York Times',
-    'These days sleeping at your desk is not just acceptable, it’s encouraged. — The Atlantic',
-    'NAPS has changed the way people think about sleep, on a grand scale. — Washington Post',
-    'Happiness increased 200% since NAPS began promoting siestas. — National Science Review',
-    'NAPS has ushered in a new era of sleep. — USA Today',
-    'Not surprisingly, more siestas means more productivity. — Wall Street Journal',
-    'NAPS is doing the hard work of helping people get the rest they need. — U.S. News'
-    ]
-    
-    let randomNumber = Math.floor(Math.random()*quotesArray.length)
-    
-    
-    document.getElementById('press-quote').textContent = '"' + quotesArray[randomNumber].split(' - ')[0] + '" - ' +quotesArray[randomNumber].split('-')[1] ;
-    </script>
-
-
-
-
-press quotes .txt
-
-'NAPS is by far the most significant cultural force of the decade. — New York Times',
-'These days sleeping at your desk is not just acceptable, it’s encouraged. — The Atlantic',
-'NAPS has changed the way people think about sleep, on a grand scale. — Washington Post',
-'Happiness increased 200% since NAPS began promoting siestas. — National Science Review',
-'NAPS has ushered in a new era of sleep. — USA Today',
-'Not surprisingly, more siestas means more productivity. — Wall Street Journal',
-'NAPS is doing the hard work of helping people get the rest they need. — U.S. News'
